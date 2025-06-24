@@ -15,34 +15,193 @@
     --light-vida-blue-bg: #e2f5ff;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; color: #333; background-color: #f9f9f9; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }  
 
 /* Header */
-header { background-color: #fff; padding: 20px 0; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 999;}
-.main-nav { display: flex; justify-content: space-between; align-items: center; padding: 0 40px; }
-.logo img { width: 20%;}
-nav ul { margin: 0; padding: 0; list-style: none; display: flex; align-items: center; }
-nav ul li { margin-left: 20px; }
-nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500; font-size: 20px; padding-bottom: 5px; }
-.nav-right { display: flex; align-items: center; }
+header { 
+    background-color: #fff; 
+    padding: 15px 0; 
+    border-bottom: 1px solid #e0e0e0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 999;
+}
+.main-nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+.logo img { 
+    width: 80px; /* Tamanho da logo no desktop */
+    display: block;
+}
+
+/* NOVO: Texto da logo escondido no desktop por padrão */
+.logo-text {
+    display: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dark-blue-text);
+}
+
+/* Estilo padrão (desktop) do menu */
+nav { 
+    display: flex; /* Garante que o menu de links apareça no desktop */
+}
+nav ul { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+    display: flex; 
+    align-items: center; 
+}
+nav ul li { margin-left: 25px; }
+nav ul li a,
+nav ul li a:visited { /* Adicionamos o ':visited' para garantir a mesma cor */
+    text-decoration: none !important; /* Remove o sublinhado em todos os casos */
+    color: var(--text-color);      /* Define a cor padrão (cinza escuro/preto) */
+    font-weight: 500; 
+    font-size: 16px; 
+    padding: 5px 0; 
+    transition: color 0.3s; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul li a:hover {
+    color: var(--primary-blue); /* Mantém o efeito de cor azul ao passar o mouse */
+}
+nav ul li a:hover { color: var(--primary-blue); }
+
+.nav-item.dropdown {
+    position: relative;
+}
+/* O painel do dropdown - escondido por padrão */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 15px; /* Espaço para não encostar no header */
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform-origin: top center;
+}
+
+/* Container dentro do painel para alinhar o conteúdo */
+.dropdown-container {
+    display: flex;
+    gap: 40px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.dropdown-column {
+    min-width: 250px;
+}
+
+/* Título de cada coluna no dropdown */
+.dropdown-column h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--dark-blue-text);
+    margin: 0 0 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Link principal de cada coluna */
+.column-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-orange);
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: color 0.3s;
+}
+.column-link:hover {
+    color: #333;
+}
+
+/* Lista de sub-itens */
+.dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.dropdown-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-list li a:hover {
+    background-color: var(--light-vida-blue-bg);
+    color: var(--primary-blue);
+}
+.dropdown-list li a i {
+    font-size: 18px;
+    width: 20px;
+    text-align: center;
+    color: var(--primary-blue);
+}
+
+/* LÓGICA DE HOVER (MOSTRAR/ESCONDER) */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+/* Estilo do link principal ao passar o mouse */
+.nav-item.dropdown:hover > .nav-link {
+    color: var(--primary-blue);
+}
+/* Animação da seta */
+.nav-item.dropdown .nav-link .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+.nav-item.dropdown:hover .nav-link .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+.header-actions { display: flex; align-items: center; gap: 15px; }
 .client-area-btn { background-color: var(--primary-blue); color: white; padding: 10px 20px; border: none; border-radius: 5px; text-decoration: none; font-weight: 500; font-size: 14px; cursor: pointer; transition: background-color 0.3s; }
 .client-area-btn:hover { background-color: #0056b3; }
+
+/* Botão hamburguer escondido no desktop por padrão */
+.menu-toggle { 
+    display: none; 
+    background: none; 
+    border: none; 
+    font-size: 24px; 
+    color: var(--dark-blue-text); 
+    cursor: pointer; 
+}
 
 /* Hero Section */
 .hero { display: flex; background-color: #fff; padding: 60px 0; position: relative; overflow: hidden; min-height: 80vh; }
@@ -150,61 +309,45 @@ nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500;
 
 /* Tablets e Desktops Menores (até 992px) */
 @media (max-width: 992px) {
-    .main-nav { flex-wrap: wrap; }
-    
+    /* Esconde os links do menu principal */
     nav {
         order: 3;
         width: 100%;
         margin-top: 15px;
-        display: none; /* Escondido por padrão */
+        display: none;
     }
     nav.active {
-        display: block; /* Mostra quando a classe .active é adicionada */
+        display: block; /* Mostra quando a classe .active é adicionada pelo JS */
     }
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
-    nav ul li {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
-    }
-    nav ul li a {
-        display: block;
-        padding: 10px;
-        background-color: #f8f9fa;
-        border-radius: 5px;
-    }
+    nav ul li { margin-left: 0; width: 100%; text-align: center; }
+    nav ul li a { display: block; padding: 10px; background-color: #f8f9fa; border-radius: 5px; }
 
-    .header-actions {
-        order: 2;
-    }
-
+    /* Mostra o botão hamburguer */
     .menu-toggle {
-        display: block; /* Mostra o botão hamburguer */
+        display: block;
     }
-    .client-area-btn {
-        display: none; /* Esconde o botão "Entre em Contato" do header */
+    
+    /* MODIFICAÇÃO: Mostra o texto da logo e ajusta o tamanho */
+    .logo-text {
+        display: inline-block; /* Faz o texto aparecer */
     }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 40px;
-    }
-    .hero-content {
-        padding-right: 0;
-        padding-left: 0; /* Remove o padding que você tinha */
-        order: 2;
-    }
-    .hero-image {
-        order: 1;
-        margin-bottom: 30px;
+    .logo img {
+        width: 50px; /* Diminui o ícone da logo para caber o texto */
     }
 
-    h1, .hero h1 { font-size: 36px; }
-    h2, .services h2, .about-content h2, .section-title, .footer h3 { font-size: 28px; }
+        /* Esconde os menus dropdown no modo mobile para não quebrar o layout */
+    .dropdown-menu {
+        display: none !important; 
+    }
+
+    /* Remove a seta para baixo no menu mobile */
+    .nav-link .fa-chevron-down {
+        display: none;
+    }
 }
 
 /* Celulares (até 768px) */
@@ -229,6 +372,10 @@ nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500;
     .social-icon:hover {
         transform: translateY(-3px) scale(1.02);
     }
+
+    .header-actions .client-area-btn {
+        display: none; 
+    }
 }
 
 /* Celulares Pequenos (até 480px) */
@@ -245,5 +392,8 @@ nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 500;
 
     .swiper-button-next, .swiper-button-prev {
         display: none; /* Esconde as setas em telas muito pequenas */
+    }
+    .logo-text {
+        font-size: 16px; /* Ajusta o tamanho da fonte da logo em telas bem pequenas */
     }
 }

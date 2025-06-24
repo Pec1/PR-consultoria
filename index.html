@@ -16,17 +16,73 @@
     <header>
         <div class="main-nav container">
             <div class="logo">
-                <a href="#hero"><img src="./images/logo2.svg" alt="Logo PR Seguros e Previdências"></a>
+                <a href="#hero">
+                    <img src="./images/logo2.svg" alt="Logo PR Seguros e Previdências">
+                    <span class="logo-text">Seguros e Previdências</span>
+                </a>
             </div>
+
             <nav id="main-menu">
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                    <li><a href="#coberturas">Para você</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Para você <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h3>Seguro de Vida Individual</h3>
+                                    <a href="#vidaModal" class="column-link" id="open-vida-btn-dropdown">Confira as coberturas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-heart-crack"></i> Morte</a></li>
+                                        <li><a href="#"><i class="fas fa-wheelchair"></i> Invalidez</a></li>
+                                        <li><a href="#"><i class="fas fa-viruses"></i> Doenças Graves</a></li>
+                                        <li><a href="#"><i class="fas fa-plus-square"></i> Assistência Funeral</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Previdência Individual</h3>
+                                    <a href="#previdenciaModal" class="column-link" id="open-previdencia-btn-dropdown">Confira os planos <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-clock"></i> Vida Toda</a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i> Private Top</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Para sua empresa <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-menu">
+                             <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h3>Seguro de Vida para empresas</h3>
+                                    <a href="#corporateModal" class="column-link" id="open-corporate-btn-dropdown">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-building"></i> Vida Empresarial</a></li>
+                                        <li><a href="#"><i class="fas fa-user-friends"></i> Vida em Grupo Flex</a></li>
+                                        <li><a href="#"><i class="fas fa-users"></i> Vida em Grupo Cotado</a></li>
+                                        <li><a href="#"><i class="fas fa-hard-hat"></i> MAG Trabalhador</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Previdência para empresas</h3>
+                                     <a href="#" class="column-link">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-landmark"></i> Empresa Privada e Pública</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#sobre" class="nav-link">Sobre</a>
+                    </li>
                 </ul>
             </nav>
+            
             <div class="header-actions">
-                <a href="#contact" class="client-area-btn">Entre em contato</a>
+                <a href="#contact" class="client-area-btn">Fale Conosco</a>
                 <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
                     <i class="fas fa-bars"></i>
                 </button>
