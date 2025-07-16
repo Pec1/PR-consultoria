@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro por Invalidez - PR Seguros e Previdências</title>
+    
+    <style>
+        .page-content {
+            padding: 80px 20px;
+            background-color: #fff;
+            max-width: 900px;
+            margin: 40px auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .page-content h1 {
+            font-size: 38px;
+            color: var(--dark-blue-text);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .page-content p.intro {
+            font-size: 18px;
+            color: var(--text-light);
+            text-align: center;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .content-divider {
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 40px 0;
+        }
+
+        .page-content h2 {
+            font-size: 28px;
+            color: var(--dark-blue-text);
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        .page-content h3 {
+            font-size: 20px;
+            color: var(--primary-teal);
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+
+        .page-content p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .coverage-features-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .coverage-features-list li {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #333;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .coverage-features-list li i {
+            color: var(--primary-blue);
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        .page-cta-btn {
+            display: block;
+            width: fit-content;
+            margin: 50px auto 0 auto;
+            background-color: var(--primary-orange);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .page-cta-btn:hover {
+            background-color: #d95700;
+            transform: translateY(-3px);
+        }
+    </style>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+
+    <header>
+        <div class="main-nav container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../images/logo2.svg" alt="Logo PR Seguros e Previdências">
+                    <span class="logo-text">Seguros e Previdências</span>
+                </a>
+            </div>
+            <nav id="main-menu">
+                <ul>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Para você <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h3>Seguro de Vida Individual</h3>
+                                    <a href="../index.html#servicos" class="column-link">Confira todas as coberturas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="morte.html"><i class="fas fa-heart-crack"></i> Morte</a></li>
+                                        <li><a href="invalidez.html"><i class="fas fa-wheelchair"></i> Invalidez</a></li>
+                                        <li><a href="doencas-graves.html"><i class="fas fa-viruses"></i> Doenças Graves</a></li>
+                                        <li><a href="saf.html"><i class="fas fa-plus-square"></i> Assistência Funeral</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Previdência Individual</h3>
+                                    <a href="../index.html#servicos" class="column-link">Confira os planos <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-clock"></i> Vida Toda</a></li>
+                                        <li><a href="#"><i class="fas fa-star"></i> Private Top</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">Para sua empresa <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <h3>Seguro de Vida para empresas</h3>
+                                    <a href="../index.html#servicos" class="column-link">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-building"></i> Vida Empresarial</a></li>
+                                        <li><a href="#"><i class="fas fa-user-friends"></i> Vida em Grupo Flex</a></li>
+                                        <li><a href="#"><i class="fas fa-users"></i> Vida em Grupo Cotado</a></li>
+                                        <li><a href="#"><i class="fas fa-hard-hat"></i> MAG Trabalhador</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h3>Previdência para empresas</h3>
+                                    <a href="../index.html#servicos" class="column-link">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <ul class="dropdown-list">
+                                        <li><a href="#"><i class="fas fa-landmark"></i> Empresa Privada e Pública</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item"> <a href="../index.html#sobre" class="nav-link">Sobre</a> </li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="../index.html#contact" class="client-area-btn">Fale Conosco</a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-content container">
+            <h1>Seguro por Invalidez</h1>
+            <p class="intro">Proteja sua longevidade mesmo se um acidente ou condição de saúde afetar sua capacidade de trabalho.</p>
+
+            <div class="content-divider"></div>
+
+            <h2>Como funciona a cobertura por Invalidez?</h2>
+            <p>O seguro de invalidez garante que você poderá arcar com as suas despesas caso algum acidente ou doença comprometa permanentemente sua capacidade de trabalho e geração de renda.</p>
+            <p>Ou seja, ao contratar um desses planos, você não vai precisar se descapitalizar, resgatar poupança ou investimentos e nem vender bens em caso de invalidez. Além disso, é possível escolher se a indenização será paga de uma só vez ou em forma de renda.</p>
+
+            <h3>Tipos de Cobertura de Invalidez:</h3>
+            <ul class="coverage-features-list">
+                <li><i class="fas fa-check-circle"></i> Invalidez Permanente Total ou Parcial por Acidente com Majoração (IPAM)</li>
+                <li><i class="fas fa-check-circle"></i> Invalidez Permanente Funcional por Doença (IFPD)</li>
+                <li><i class="fas fa-check-circle"></i> Invalidez Permanente Total por Acidente (IPTA)</li>
+                <li><i class="fas fa-check-circle"></i> Renda por Invalidez</li>
+            </ul>
+
+            <a href="../index.html#contact" class="page-cta-btn">Fale com um especialista</a>
+        </section>
+    </main>
+    
+    <footer id="contact" class="footer">
+       </footer>
+    
+    <script src="../script.js"></script>
+</body>
+</html>

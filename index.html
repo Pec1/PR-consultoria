@@ -21,7 +21,6 @@
                     <span class="logo-text">Seguros e Previdências</span>
                 </a>
             </div>
-
             <nav id="main-menu">
                 <ul>
                     <li class="nav-item dropdown">
@@ -30,17 +29,17 @@
                             <div class="dropdown-container">
                                 <div class="dropdown-column">
                                     <h3>Seguro de Vida Individual</h3>
-                                    <a href="#vidaModal" class="column-link" id="open-vida-btn-dropdown">Confira as coberturas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <a href="#" class="column-link open-modal-trigger" data-modal-id="vidaModal">Confira todas as coberturas <i class="fas fa-arrow-right fa-xs"></i></a>
                                     <ul class="dropdown-list">
-                                        <li><a href="#"><i class="fas fa-heart-crack"></i> Morte</a></li>
-                                        <li><a href="#"><i class="fas fa-wheelchair"></i> Invalidez</a></li>
-                                        <li><a href="#"><i class="fas fa-viruses"></i> Doenças Graves</a></li>
-                                        <li><a href="#"><i class="fas fa-plus-square"></i> Assistência Funeral</a></li>
+                                        <li><a href="pages/morte.html"><i class="fas fa-heart-crack"></i> Morte</a></li>
+                                        <li><a href="pages/invalidez.html"><i class="fas fa-wheelchair"></i> Invalidez</a></li>
+                                        <li><a href="pages/doencas-graves.html"><i class="fas fa-viruses"></i> Doenças Graves</a></li>
+                                        <li><a href="pages/saf.html"><i class="fas fa-plus-square"></i> Assistência Funeral</a></li>
                                     </ul>
                                 </div>
                                 <div class="dropdown-column">
                                     <h3>Previdência Individual</h3>
-                                    <a href="#previdenciaModal" class="column-link" id="open-previdencia-btn-dropdown">Confira os planos <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <a href="#" class="column-link open-modal-trigger" data-modal-id="previdenciaModal">Confira os planos <i class="fas fa-arrow-right fa-xs"></i></a>
                                     <ul class="dropdown-list">
                                         <li><a href="#"><i class="fas fa-clock"></i> Vida Toda</a></li>
                                         <li><a href="#"><i class="fas fa-star"></i> Private Top</a></li>
@@ -53,10 +52,10 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link">Para sua empresa <i class="fas fa-chevron-down fa-xs"></i></a>
                         <div class="dropdown-menu">
-                             <div class="dropdown-container">
+                            <div class="dropdown-container">
                                 <div class="dropdown-column">
                                     <h3>Seguro de Vida para empresas</h3>
-                                    <a href="#corporateModal" class="column-link" id="open-corporate-btn-dropdown">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <a href="#" class="column-link open-modal-trigger" data-modal-id="corporateModal">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
                                     <ul class="dropdown-list">
                                         <li><a href="#"><i class="fas fa-building"></i> Vida Empresarial</a></li>
                                         <li><a href="#"><i class="fas fa-user-friends"></i> Vida em Grupo Flex</a></li>
@@ -66,7 +65,7 @@
                                 </div>
                                 <div class="dropdown-column">
                                     <h3>Previdência para empresas</h3>
-                                     <a href="#" class="column-link">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
+                                    <a href="#" class="column-link">Confira planos para empresas <i class="fas fa-arrow-right fa-xs"></i></a>
                                     <ul class="dropdown-list">
                                         <li><a href="#"><i class="fas fa-landmark"></i> Empresa Privada e Pública</a></li>
                                     </ul>
@@ -75,9 +74,7 @@
                         </div>
                     </li>
                     
-                    <li class="nav-item">
-                        <a href="#sobre" class="nav-link">Sobre</a>
-                    </li>
+                    <li class="nav-item"> <a href="#sobre" class="nav-link">Sobre</a> </li>
                 </ul>
             </nav>
             
@@ -125,7 +122,7 @@
                 <div class="services-grid">
                     <div class="service-card">
                         <div class="service-card-content">
-                            <div class="service-icon"><i class="fas fa-shield-heart"></i></div>
+                            <div class="service-icon"><i class="fas fa-heart-pulse"></i></div>
                             <h3>Seguro de Vida</h3>
                             <p>Proteção completa para você e sua família em todos os momentos. Coberturas personalizadas para cada perfil.</p>
                         </div>
@@ -197,7 +194,7 @@
                                 <h4>Morte</h4>
                                 <p>Os beneficiários recebem o valor do seguro, em caso de morte natural ou acidental do titular.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="./pages/morte.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                         <div class="plan-card">
                             <div>
@@ -205,7 +202,7 @@
                                 <h4>Invalidez</h4>
                                 <p>Receba o valor do seguro em caso de doença ou acidente que cause invalidez, comprometendo sua renda.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/invalidez.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                         <div class="plan-card">
                             <div>
@@ -213,7 +210,7 @@
                                 <h4>Doenças Graves</h4>
                                 <p>Você recebe o valor do seguro para usar como quiser, caso seja diagnosticado com uma das doenças previstas.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/doencas-graves.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                         <div class="plan-card">
                             <div>
@@ -221,7 +218,7 @@
                                 <h4>Diária por Incapacidade Temporária (DIT)</h4>
                                 <p>Em caso de um imprevisto, receba o valor do seguro de acordo com os dias que se afastou do trabalho.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/dit.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                         <div class="plan-card">
                             <div>
@@ -229,7 +226,7 @@
                                 <h4>Diária por Internação Hospitalar (DIH)</h4>
                                 <p>Caso fique impossibilitado, você receberá uma indenização para cada dia de internação hospitalar.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/dih.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                          <div class="plan-card">
                             <div>
@@ -237,7 +234,7 @@
                                 <h4>Seguro Cirurgias</h4>
                                 <p>Receba uma indenização caso precise passar por um dos mais de 900 procedimentos cirúrgicos cobertos.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/cirurgias.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                          <div class="plan-card">
                             <div>
@@ -245,7 +242,7 @@
                                 <h4>Seguro de Assistência Funeral (SAF)</h4>
                                 <p>O SAF garante a realização ou pagamento das despesas do funeral até o limite contratado.</p>
                             </div>
-                            <a href="#" class="saiba-mais-btn">Saiba mais</a>
+                            <a href="pages/saf.html" class="saiba-mais-btn">Saiba mais</a>
                         </div>
                     </div>
                 </section>
