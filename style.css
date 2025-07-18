@@ -397,3 +397,13 @@ nav ul li a:hover { color: var(--primary-blue); }
         font-size: 16px; /* Ajusta o tamanho da fonte da logo em telas bem pequenas */
     }
 }
+
+.page-content h4 {
+    font-size: 18px;
+    color: var(--dark-blue-text);
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-left: 3px solid var(--primary-blue);
+    padding-left: 10px;
+}
