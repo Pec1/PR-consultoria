@@ -352,8 +352,13 @@ nav ul li a:hover { color: var(--primary-blue); }
 
 /* Celulares (até 768px) */
 @media (max-width: 768px) {
+    .hero-content {
+        padding-left: 30px;
+        margin-top: 0vh;
+    }
+
     .hero-image img {
-        max-width: 70%; /* Ajuste o tamanho da imagem da hero section se necessário */
+        display: none;
     }
     .about-section .container {
         flex-direction: column;
@@ -407,3 +412,6 @@ nav ul li a:hover { color: var(--primary-blue); }
     border-left: 3px solid var(--primary-blue);
     padding-left: 10px;
 }
+
+
+
